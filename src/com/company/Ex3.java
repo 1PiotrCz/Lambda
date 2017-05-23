@@ -25,7 +25,7 @@ public class Ex3 {
 //        for (String name : names) {
 //
 //        }
-        Consumer consumer = arg1 -> System.out.println(arg1)
+        Consumer consumer = arg1 -> System.out.println(arg1);
 //        names.forEach(arg1 -> System.out.println(arg1));
         names.forEach(consumer);
     }

@@ -9,26 +9,31 @@ public class Calculator {
         IntegerMath adding = new IntegerMath() {
             @Override
             public int operate(int a, int b) {
-                return a +b ;
+                return a + b;
             }
         };
 
-        IntegerMath subtraction = (a,b) -> a-b;
-        IntegerMath multiplication = (a,b) -> a*b;
-        IntegerMath division = (a,b) -> {
+        IntegerMath subtraction = (a, b) -> a - b;
+        IntegerMath multiplication = (a, b) -> a * b;
+        IntegerMath division = (a, b) -> {
             if (b == 0) {
                 throw new IllegalArgumentException("Nie dziel przez zero");
             }
-            return a/b;
+            return a / b;
         };
 
-        System.out.println(operateBinary(5,10,adding));
-        System.out.println(operateBinary(20,10,subtraction));
-        System.out.println(operateBinary(20,10,multiplication));
-        System.out.println(operateBinary(20,0,division));
+        System.out.println(operateBinary(5, 10, adding));
+        System.out.println(operateBinary(20, 10, subtraction));
+        System.out.println(operateBinary(20, 10, multiplication));
+        System.out.println(operateBinary(20, 0, division));
     }
 
+//    Consumer
     public static int operateBinary (int a, int b, IntegerMath math){
         return math.operate(a,b);
+
+//    public static int operateBinary(int a, int b, BiFunction<Integer, Integer, Integer> math){
+//        return math.apply(a,b);
     }
+
 }
