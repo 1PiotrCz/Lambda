@@ -84,11 +84,11 @@ public class Stream1 {
 
             System.out.println("statystyki:" + statistics);
 
-      List<String> converted =
-              personList
-              .stream()
-              .map(s->s.getName())
-              .collect(Collectors.toList());
+            List<String> converted =
+                    personList
+                            .stream()
+                            .map(s -> s.getName())
+                            .collect(Collectors.toList());
 
             System.out.println(converted);
         }

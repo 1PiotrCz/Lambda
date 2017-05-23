@@ -14,8 +14,8 @@ public class Ex2 {
         integerList.add(8);
         integerList.add(12);
         System.out.println(map(integerList, a -> a + 5));
-
     }
+
     public static List map(List<Integer> list, IntFunction<Integer> operate) {
         List<Integer> newList = new ArrayList<>();
         for (int i : list) {

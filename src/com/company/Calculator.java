@@ -13,6 +13,7 @@ public class Calculator {
             }
         };
 
+
         IntegerMath subtraction = (a, b) -> a - b;
         IntegerMath multiplication = (a, b) -> a * b;
         IntegerMath division = (a, b) -> {
@@ -28,9 +29,9 @@ public class Calculator {
         System.out.println(operateBinary(20, 0, division));
     }
 
-//    Consumer
-    public static int operateBinary (int a, int b, IntegerMath math){
-        return math.operate(a,b);
+    //    Consumer
+    public static int operateBinary(int a, int b, IntegerMath math) {
+        return math.operate(a, b);
 
 //    public static int operateBinary(int a, int b, BiFunction<Integer, Integer, Integer> math){
 //        return math.apply(a,b);
