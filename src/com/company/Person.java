@@ -9,6 +9,11 @@ public class Person {
     private int age;
     private char sex;
 
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
     public String getName() {
         return name;
     }
