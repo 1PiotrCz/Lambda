@@ -90,7 +90,60 @@ public class Stream1 {
                             .map(s -> s.getName())
                             .collect(Collectors.toList());
 
-            System.out.println(converted);
+//            System.out.println(converted);
+
+
+            List<Person> personList1 = new ArrayList<>();
+            personList1.add(new Person("Piotr", 22));
+            personList1.add(new Person("Oskar", 26));
+            personList1.add(new Person("Marek", 22));
+            personList1.add(new Person("Olaf", 29));
+            personList1.add(new Person("Lukasz", 31));
+
+            Map<Integer, List<Person>> groupByAge = personList1
+                    .stream()
+                    .collect(Collectors.groupingBy(o -> o.getAge()));
+//
+            groupByAge.forEach((a, b) -> System.out.println(a + " : " + b.toString()));
+
+
+//            System.out.println(groupByAge.values());
+
+//BiConsummer
+//            groupByAge.forEach((key, value) -> System.out.println("Key" + key));
+//            groupByAge.forEach((key, value) -> printList(value));
+
+
+            List<String> names = Arrays.asList("Katarzyna", "Piotrek", "Ola", "Marta", "Michał");
+
+            names
+                    .stream()
+                    .map(s-> {
+                        if (s.endsWith("a")) {
+                            return s + "(K)";
+                        } else {
+                            return s + "(M)";
+                        }
+
+//                    }).forEach(System.out::println);
+
+                    }).mapToInt(s->s.length())
+                    .max()
+                    .ifPresent(System.out::println);
+
+            List<String> womanNames = names
+                    .stream()
+                    .filter(s -> s.endsWith("a"))
+                    .collect(Collectors.toList());
+
         }
+
+
     }
+
+//    public static void printList(List list) {
+//        for (Person p : list) {
+//            System.out.println("Person" + p.toString());
+//        }
+
 }
