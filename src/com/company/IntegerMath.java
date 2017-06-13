@@ -6,7 +6,7 @@ package com.company;
 @FunctionalInterface
 public interface IntegerMath {
     int operate(int a, int b);
-//    default void piotr(){ // defaultowe metody mozna uzywac pozostawia ze dalej metoda jest funkcyjna
+    default void piotr(){ // defaultowe metody mozna uzywac pozostawia ze dalej metoda jest funkcyjna
 
-//    }
+    }
 }

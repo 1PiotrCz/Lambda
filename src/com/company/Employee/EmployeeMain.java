@@ -25,6 +25,7 @@ public class EmployeeMain {
         Map<String, List<Employee>> groupByCompany = employeeList
                 .stream()
                 .collect(Collectors.groupingBy(c -> c.getCompany()));
+        System.out.println(groupByCompany + "\n");
 
         groupByCompany.forEach((company, c) -> System.out.println(c));
     }

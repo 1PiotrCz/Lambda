@@ -35,6 +35,11 @@ public class Calculator {
 
 //    public static int operateBinary(int a, int b, BiFunction<Integer, Integer, Integer> math){
 //        return math.apply(a,b);
+
+//    private int oparate(int a, int b){
+//        return  a + b;
+//    }
+
     }
 
 }
